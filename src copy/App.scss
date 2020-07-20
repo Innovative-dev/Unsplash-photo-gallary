@@ -1,0 +1,36 @@
+$primary: skyblue;
+
+.title{
+  color: $primary;
+}
+
+.loader-wrapper{
+  width: 100%;
+  height: 76vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h6{
+    text-align: center;
+    margin-top: -2rem;
+    color: #737f92;
+    font-weight: 600;
+  }
+}
+
+.navbar{
+  form{
+    position: relative;
+    .form-control{
+      border-radius: 30px;
+      padding-left: 38px;
+    }
+    .fa-search{
+      position: absolute;
+      top: 11px;
+      left: 31px;
+      font-size: 15px;
+      color: #a5b2c5;
+    }
+  }
+}
