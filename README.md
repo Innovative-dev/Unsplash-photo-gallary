@@ -72,4 +72,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ![alt text](./screencapture-1.png)
 <br/>
+<br/>
+Responsive design 
+<br/>
+<br/>
 ![alt text](./screencapture-2.png)
