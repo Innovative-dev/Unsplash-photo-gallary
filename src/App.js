@@ -1,25 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import ReduxThunk from 'redux-thunk';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import { persistStore, persistReducer } from 'redux-persist';
+import { PersistGate } from 'redux-persist/lib/integration/react';
+import storage from "redux-persist/lib/storage";
+import reducers from './store/reducers';
+import Home from './container/Home';
+
+const persistConfig = {
+  key: 'root',
+  storage: storage
+}
+const persistedReducer = persistReducer(persistConfig, reducers);
 
 function App() {
+
+  const store = createStore(persistedReducer, {}, applyMiddleware(ReduxThunk));
+  const persistor = persistStore(store);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <Router>
+          <Route path="/" exact component={Home} />
+        </Router>
+      </PersistGate>
+    </Provider>
+
   );
 }
 

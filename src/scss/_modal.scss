@@ -1,0 +1,78 @@
+.modal-wrapper {
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+  z-index: 9999;
+  .modal-body {
+    background-color: $white;
+    padding: 10px 15px;
+    text-align: center;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    width: 460px;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 3em;
+
+    .user-info {
+      display: flex;
+      height: 52px;
+      padding: 0 0.5rem 0 1rem;
+      align-items: center;
+      img {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        margin-right: 1rem;
+      }
+      div {
+        text-align: left;
+        line-height: 12px;
+        h6 {
+          font-weight: 600;
+          margin: 0;
+          font-size: 13px;
+        }
+        small {
+          color: $gray;
+          font-size: 11px;
+        }
+      }
+    }
+
+    .img-wrapper {
+      text-align: center;
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .btn.close {
+      background: $dark;
+      height: 26px;
+      width: 26px;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      display: inline-flex;
+      position: absolute;
+      top: -11px;
+      right: -14px;
+      img {
+        width: 10px;
+      }
+    }
+    .btn-wrapper {
+      text-align: center;
+      margin: 18px 0 10px 0;
+      .btn {
+        border-radius: 30px;
+        width: 110px;
+      }
+    }
+  }
+}
