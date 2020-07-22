@@ -72,4 +72,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ![alt text](./screencapture-1.png)
 <br/>
-![alt text](./screencapture-1.png)
+![alt text](./screencapture-2.png)
